@@ -1,0 +1,18 @@
+[33mf9d3c26[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: rebase (finish): returning to refs/heads/main
+[33mf9d3c26[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: rebase (pick): Menambahkan Variasi:
+[33m5f57348[m HEAD@{2}: rebase (pick): Aplikasi Pertambahan Dua Angka
+[33mf3c88b6[m HEAD@{3}: rebase (pick): Menambahkan GUI Components Dan Mendesain Aplikasi
+[33mf7b2f8b[m HEAD@{4}: rebase (start): checkout f7b2f8b
+[33mfc65723[m HEAD@{5}: commit: Menambahkan Variasi:
+[33m7d80496[m HEAD@{6}: commit: Aplikasi Pertambahan Dua Angka
+[33m2db0a52[m HEAD@{7}: checkout: moving from ab9a79b183627d3f15d2a5c81e828f9121eeefdc to main
+[33mab9a79b[m[33m ([m[1;32mbackup_lama[m[33m)[m HEAD@{8}: checkout: moving from main to ab9a79b
+[33m2db0a52[m HEAD@{9}: commit: Menambahkan GUI Components Dan Mendesain Aplikasi
+[33m277a154[m HEAD@{10}: merge backup_lama: Merge made by the 'ort' strategy.
+[33mf7b2f8b[m HEAD@{11}: checkout: moving from main to main
+[33mf7b2f8b[m HEAD@{12}: checkout: moving from ab9a79b183627d3f15d2a5c81e828f9121eeefdc to main
+[33mab9a79b[m[33m ([m[1;32mbackup_lama[m[33m)[m HEAD@{13}: checkout: moving from main to ab9a79b
+[33mf7b2f8b[m HEAD@{14}: reset: moving to f7b2f8b
+[33mf7b2f8b[m HEAD@{15}: reset: moving to f7b2f8b
+[33m2d66e40[m HEAD@{16}: pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+[33mf7b2f8b[m HEAD@{17}: commit (initial): Membuat Jframe Form
