@@ -55,7 +55,7 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jFieldAngka1" alignment="1" pref="220" max="32767" attributes="0"/>
                       <Component id="jFieldAngka2" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jFieldHasil3" alignment="1" max="32767" attributes="0"/>
+                      <Component id="jFieldHasil" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -86,7 +86,7 @@
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelHasil" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jFieldHasil3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jFieldHasil" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -136,7 +136,7 @@
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jFieldAngka2KeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jFieldHasil3">
+        <Component class="javax.swing.JTextField" name="jFieldHasil">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="14" style="1"/>
@@ -144,7 +144,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFieldHasil3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFieldHasilActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHapus">

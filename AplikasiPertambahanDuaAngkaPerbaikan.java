@@ -1,6 +1,7 @@
 package Latihan1Remake;
 
 
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,7 +26,7 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
         jLabelHasil = new javax.swing.JLabel();
         jFieldAngka1 = new javax.swing.JTextField();
         jFieldAngka2 = new javax.swing.JTextField();
-        jFieldHasil3 = new javax.swing.JTextField();
+        jFieldHasil = new javax.swing.JTextField();
         jButtonHapus = new javax.swing.JButton();
         jButtonTambah = new javax.swing.JButton();
         jButtonKeluar = new javax.swing.JButton();
@@ -66,11 +67,11 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
             }
         });
 
-        jFieldHasil3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jFieldHasil3.setEnabled(false);
-        jFieldHasil3.addActionListener(new java.awt.event.ActionListener() {
+        jFieldHasil.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jFieldHasil.setEnabled(false);
+        jFieldHasil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFieldHasil3ActionPerformed(evt);
+                jFieldHasilActionPerformed(evt);
             }
         });
 
@@ -115,7 +116,7 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jFieldAngka1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(jFieldAngka2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jFieldHasil3, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jFieldHasil, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(88, 88, 88)
@@ -140,7 +141,7 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelHasil)
-                    .addComponent(jFieldHasil3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFieldHasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonHapus)
@@ -164,31 +165,55 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTambahActionPerformed
-      
+    try {
+    double angka1 = Double.parseDouble(jFieldAngka1.getText());
+    double angka2 = Double.parseDouble(jFieldAngka2.getText());
+    double hasil = angka1 + angka2;
+
+    if (hasil % 1 == 0) {
+        // Jika hasilnya bilangan bulat, tampilkan tanpa .0
+        jFieldHasil.setText(String.valueOf((int) hasil));
+    } else {
+        // Jika hasilnya desimal, tetap tampilkan apa adanya
+        jFieldHasil.setText(String.valueOf(hasil));
+    }
+    
+} catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this, "Masukkan angka yang valid!",
+                                  "Error", JOptionPane.ERROR_MESSAGE);
+}
+
     }//GEN-LAST:event_jButtonTambahActionPerformed
     private void jButtonHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHapusActionPerformed
-    
+    jFieldAngka1.setText("");
+    jFieldAngka2.setText("");
+    jFieldHasil.setText("");
+    jFieldAngka1.requestFocus();
     }//GEN-LAST:event_jButtonHapusActionPerformed
-
     private void jButtonKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKeluarActionPerformed
-    
+    System.exit(0);
     }//GEN-LAST:event_jButtonKeluarActionPerformed
-
     private void jFieldAngka1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jFieldAngka1KeyTyped
-    
+    char c = evt.getKeyChar();
+        if (!Character.isDigit(c) && c != '.') {
+             evt.consume(); // Menolak input non-angka
+        }
     }//GEN-LAST:event_jFieldAngka1KeyTyped
     private void jFieldAngka2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jFieldAngka2KeyTyped
- 
+    char c = evt.getKeyChar();
+           if (!Character.isDigit(c) && c != '.') {
+                evt.consume(); // Menolak input non-angka
+           }
     }//GEN-LAST:event_jFieldAngka2KeyTyped
     private void jFieldAngka1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFieldAngka1FocusGained
-  
+  jFieldAngka1.setText("");
     }//GEN-LAST:event_jFieldAngka1FocusGained
     private void jFieldAngka2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFieldAngka2FocusGained
-  
+  jFieldAngka2.setText("");
     }//GEN-LAST:event_jFieldAngka2FocusGained
-    private void jFieldHasil3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFieldHasil3ActionPerformed
+    private void jFieldHasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFieldHasilActionPerformed
      
-    }//GEN-LAST:event_jFieldHasil3ActionPerformed
+    }//GEN-LAST:event_jFieldHasilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,7 +246,7 @@ public class AplikasiPertambahanDuaAngkaPerbaikan extends javax.swing.JFrame {
     private javax.swing.JButton jButtonTambah;
     private javax.swing.JTextField jFieldAngka1;
     private javax.swing.JTextField jFieldAngka2;
-    private javax.swing.JTextField jFieldHasil3;
+    private javax.swing.JTextField jFieldHasil;
     private javax.swing.JLabel jLabelAngka1;
     private javax.swing.JLabel jLabelAngka2;
     private javax.swing.JLabel jLabelHasil;
